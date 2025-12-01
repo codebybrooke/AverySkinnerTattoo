@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avery Skinner Tattoo</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+   
+
+<body>
+
+    <!-- ================= HEADER / NAVIGATION ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <span class="logo-text">Avery Skinner</span>
+                <img src="images/IMG_45.png" alt="skull icon" class="skull-icon">
+                <span class="logo-text">Tattoo</span>
+            </div>
+
+            <div class="navbar-right">
+                <a class="nav-button" href="#portfolio-scheduling">Portfolio & Scheduling</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== ROW 1: ABOUT AVERY ========== -->
+<section class="about-section">
+    <div class="about-section-content">
+        <!-- CTA Button -->
+        <a href="#contact-form" class="cta-button" onclick="ctaClicked()">Book a Session</a>
+
+    </div>
+</section>
+
+<!-- ========== ROW 2: PORTFOLIO & SCHEDULING ========== -->
+<section class="portfolio-scheduling-container" id="portfolio-scheduling">
+
+    <div class="two-column-row">
+
+        <!-- LEFT COLUMN: SLIDESHOW -->
+        <div class="column slideshow">
+            <div class="slideshow-container">
+                <img id="slide" src="images/IMG_3646.JPEG" alt="Tattoo Work" onmouseover="hoverSlide()">
+
+                <!-- Left & Right Arrows -->
+                <span class="prev" onclick="prevSlide()">&#10094;</span>
+                <span class="next" onclick="nextSlide()">&#10095;</span>
+            </div>
+        </div>
+
+      <!-- ====right column:CONTACT FORM ========== -->
+        <section class="contact-form-section" id="contact-form">
+        <form action="#" method="POST">
+            <h2>Book A Session</h2>
+
+            <p id="liveMessage" class="live-message"></p>
+
+            <!-- Name -->
+            <label for="contact-name">Name:</label>
+            <input 
+            type="text" 
+            id="contact-name" 
+            name="name" 
+            required 
+            minlength="2" 
+            maxlength="30"
+            placeholder="Your Name">
+            <small class="form-instruction">Enter your full name (2–30 characters)</small>
+
+            <!-- Phone Number -->
+            <label for="contact-phone">Phone Number:</label>
+            <div class="phone-inputs">
+            <input type="tel" id="phone1" name="phone1" required pattern="\d{3}" maxlength="3" placeholder="123">
+            <input type="tel" id="phone2" name="phone2" required pattern="\d{3}" maxlength="3" placeholder="456">
+            <input type="tel" id="phone3" name="phone3" required pattern="\d{4}" maxlength="4" placeholder="7890">
+            </div>
+            <small class="form-instruction">Enter your phone as 3-3-4 digits</small>
+
+            <!-- Optional Message -->
+        <label for="contact-message">Message (optional):</label>
+
+        <div class="message-upload-row">
+            
+            <!-- Message box -->
+            <textarea 
+            id="contact-message" 
+            name="message" 
+            maxlength="200" 
+            placeholder="Brief message"></textarea>
+
+            <!-- Upload button -->
+            <div class="upload-wrapper">
+            <label for="upload-file" class="upload-button">Upload Photo</label>
+            <input type="file" id="upload-file" name="file" style="display:none;">
+            </div>
+
+        </div>
+
+        <small class="form-instruction">Optional: Let Avery know what you’re looking for</small>
+
+            <button type="submit">Send</button>
+        </form>
+        </section>
+
+            </div>
+
+        </section>
+
+
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
